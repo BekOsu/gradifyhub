@@ -1,0 +1,20 @@
+{
+  "name": "@repo/contracts",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./auth": "./auth.ts",
+    "./profile": "./profile.ts",
+    "./assessment": "./assessment.ts",
+    "./roadmap": "./roadmap.ts",
+    "./interview-prep": "./interview-prep.ts",
+    "./self-assessment": "./self-assessment.ts"
+  },
+  "dependencies": {
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "typescript": "5.9.2"
+  }
+}
