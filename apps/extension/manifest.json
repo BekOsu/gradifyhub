@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "GradifyHub English",
+  "short_name": "GradifyHub",
+  "version": "1.0.0",
+  "description": "Extract vocabulary from any webpage and save to your GradifyHub vault",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "GradifyHub English"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "https://gradifyhub.com/*",
+    "http://localhost:3000/*"
+  ],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}

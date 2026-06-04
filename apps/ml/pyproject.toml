@@ -1,0 +1,17 @@
+[project]
+name = "gradifyhub-ml-sidecar"
+version = "0.1.0"
+description = "Assessment sidecar for GradifyHub"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn>=0.30.0",
+  "redis>=5.0.7",
+  "catsim>=0.17.3",
+]
+
+[tool.uvicorn]
+factory = false
+host = "0.0.0.0"
+port = 8000
+
