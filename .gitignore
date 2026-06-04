@@ -1,0 +1,110 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# ─── Dependencies ────────────────────────────────────────────────
+node_modules
+.pnp
+.pnp.js
+.yarn/install-state.gz
+.pnpm-store/
+
+# Python (apps/ml)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.Python
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# ─── Env & secrets ───────────────────────────────────────────────
+# Never commit real env values. Only `.env.example` is allowed.
+.env
+.env.*
+!.env.example
+!.env*.example
+
+# Keys, certs, credentials
+*.pem
+*.key
+*.crt
+*.cer
+*.pfx
+*.p12
+*.jks
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+*.gpg
+*.asc
+credentials.json
+service-account*.json
+gcp-*.json
+aws-*.json
+secrets/
+.secrets/
+
+# ─── Build output ────────────────────────────────────────────────
+.next/
+out/
+build/
+dist/
+.turbo/
+*.tsbuildinfo
+next-env.d.ts
+
+# ─── Testing / coverage ──────────────────────────────────────────
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+playwright/.cache/
+
+# ─── Platform / tooling ──────────────────────────────────────────
+.vercel
+.sentryclirc
+.netlify
+.wrangler/
+.cache/
+.parcel-cache/
+
+# ─── Drizzle ─────────────────────────────────────────────────────
+# Migrations ARE committed (apps/web/drizzle/) — do not ignore.
+drizzle.config.local.*
+
+# ─── IDE / editors ───────────────────────────────────────────────
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.recommended.json
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+.claude/
+
+# ─── OS ──────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ─── Logs ────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+
+# ─── Private docs (local only) ───────────────────────────────────
+# All .md files are local-only by default. Only README.md is public.
+# Keeps CLAUDE.md, DECISIONS.md, AGENTS.md, docs/*.md, scratch notes off GitHub.
+*.md
+!README.md
+!**/README.md
