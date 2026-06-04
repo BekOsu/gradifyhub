@@ -1,0 +1,1 @@
+ALTER TABLE "attempt" ADD COLUMN "attempt_goal" text;

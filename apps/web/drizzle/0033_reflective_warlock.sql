@@ -1,0 +1,1 @@
+ALTER TABLE "lesson" ADD COLUMN "active" boolean DEFAULT true NOT NULL;

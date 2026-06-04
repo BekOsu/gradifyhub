@@ -1,0 +1,21 @@
+CREATE TABLE "course" (
+	"id" text PRIMARY KEY NOT NULL,
+	"slug" text NOT NULL,
+	"title" text NOT NULL,
+	"description" text NOT NULL,
+	"provider" text NOT NULL,
+	"image_url" text,
+	"course_url" text NOT NULL,
+	"level" text DEFAULT 'beginner' NOT NULL,
+	"category" text NOT NULL,
+	"tags" jsonb DEFAULT '[]'::jsonb NOT NULL,
+	"duration_hours" integer,
+	"student_count" integer,
+	"rating" real,
+	"is_free" boolean DEFAULT true NOT NULL,
+	"is_published" boolean DEFAULT false NOT NULL,
+	"order" integer DEFAULT 0 NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "course_slug_unique" UNIQUE("slug")
+);

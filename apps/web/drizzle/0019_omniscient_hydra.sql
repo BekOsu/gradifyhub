@@ -1,0 +1,1 @@
+ALTER TABLE "message" ADD COLUMN "sender_role" text DEFAULT 'tutor' NOT NULL;

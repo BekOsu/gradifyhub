@@ -1,0 +1,1 @@
+ALTER TABLE "lesson" ADD COLUMN "track" text DEFAULT 'ai-engineer' NOT NULL;

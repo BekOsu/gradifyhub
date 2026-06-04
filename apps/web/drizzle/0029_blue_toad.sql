@@ -1,0 +1,1 @@
+ALTER TABLE "track" ADD COLUMN "live_job_data" jsonb;

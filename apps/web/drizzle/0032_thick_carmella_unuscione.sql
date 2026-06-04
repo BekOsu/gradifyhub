@@ -1,0 +1,1 @@
+ALTER TABLE "lesson" ADD COLUMN "global_sequence_index" integer DEFAULT 0 NOT NULL;
