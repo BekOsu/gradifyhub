@@ -1,0 +1,69 @@
+---
+title: "The Technical Interview Playbook for AI Engineers"
+description: "AI engineering interviews are different from standard software engineering interviews — but most candidates prepare for the wrong thing. Here's what to actually study."
+date: "2026-02-18"
+author: "Graduate.dev"
+tags: ["interviews", "ai-engineering", "career"]
+---
+
+If you're preparing for an AI engineering role by grinding LeetCode, you're preparing for the wrong exam. Most AI engineering interview loops have some algorithmic coding, but the differentiated components — the parts that actually determine whether you get the offer — are specific to AI: system design for AI systems, ML fundamentals, and practical LLM knowledge.
+
+Here's what the interview loop actually looks like at most companies hiring AI engineers, and how to prepare for each component.
+
+## The typical AI engineering interview loop
+
+Most loops at startups and mid-size tech companies run 4–5 rounds:
+
+1. **Recruiter screen** (30 min): background, motivation, basic salary expectations
+2. **Technical screen** (45–60 min): one or two coding problems, usually easier than Big Tech standard
+3. **AI/ML technical deep dive** (60 min): your knowledge of LLMs, model behavior, and system design
+4. **Take-home or live coding** (varies): build a small AI feature or extend an existing codebase
+5. **Culture or values** (30–45 min): alignment, collaboration style, growth mindset
+
+The technical screen is typically standard software engineering: data structures, algorithms, Python. The real differentiation happens in rounds 3 and 4.
+
+## What the AI/ML technical deep dive actually tests
+
+This is the round most candidates underperform because they don't know what to expect. It's not a quiz on obscure ML papers. It's a structured conversation about your depth of understanding.
+
+**Common question areas:**
+
+**How do LLMs work at a high level?** You need to explain transformers and attention without getting lost in the math. The interviewer wants to know: do you understand tokens, context windows, temperature, and why LLMs have the failure modes they have (hallucination, repetition, inconsistency)?
+
+**Prompt engineering and evaluation.** You should be able to explain few-shot prompting, chain-of-thought prompting, and output parsing. More importantly, you should be able to discuss how you'd evaluate whether a prompt is working — not just "it looks good" but measurable metrics.
+
+**RAG architecture.** When would you use RAG versus fine-tuning? What are the tradeoffs? How do you handle chunking for long documents? What happens when retrieval fails? These questions are practical, not theoretical.
+
+**Cost and latency management.** At scale, an LLM feature that costs $0.10 per request is a budget problem. Interviewers will ask how you've thought about caching, token budgeting, model selection (when to use a smaller/cheaper model), and streaming.
+
+**Failure modes.** What do you do when the LLM returns malformed JSON? How do you handle a prompt injection attempt? What's your retry strategy for API timeouts? The interviewer is checking whether you've actually shipped AI features, not just played with them in a notebook.
+
+## The system design round for AI systems
+
+Standard system design knowledge is assumed. The additional layer for AI-specific design:
+
+**LLM pipeline design.** "Design a document Q&A system for a company with one million internal documents." Walk through: ingestion pipeline, chunking strategy, embedding model selection, vector store design, retrieval logic, generation, evaluation. Interviewers want to see you think through the full data flow, not just the model call.
+
+**Scale and cost modeling.** If you have 100,000 daily active users and each generates 5 LLM requests per session, what does that cost at current API rates? How would you architect the system to control costs at scale? Having rough numbers in your head (GPT-4o is around $2.50 per million input tokens, smaller models are 10–50× cheaper) signals real-world experience.
+
+**Observability.** How do you know if your AI feature is working? This means: request and response logging with PII scrubbing, latency tracking by model tier, output quality monitoring, and alerting on degradation. Many candidates forget to mention observability. It's a strong signal when you bring it up without being asked.
+
+## The take-home or live coding round
+
+This is typically the most revealing part of the process and the part candidates prepare for least.
+
+**For live coding:** Practice building a small AI feature from scratch while narrating your thinking. Common prompts include "build a CLI tool that answers questions from a PDF," "add streaming to this existing API endpoint," or "debug why this prompt returns inconsistent output."
+
+**For take-home projects:** The rubric is almost always the same: does it work, is the code readable, do the edge cases get handled, and does the README explain the tradeoffs? Spend 30% of your time on the implementation, 30% on correctness and edge cases, and the remaining 40% on documentation and README quality.
+
+**The one thing that distinguishes strong candidates:** They know what they'd do differently with more time. Interviewers will ask "if you had another day, what would you add or change?" A candidate who has already thought about this is a candidate who thinks in production terms, not just demos.
+
+## How to prepare
+
+**Study the fundamentals.** Understand transformers at a conceptual level — Andrej Karpathy's "Neural Networks: Zero to Hero" series is the best resource for this. Know the major LLM APIs (OpenAI, Anthropic, Google), understand vector databases and when to use them, and be able to explain RAG architecture end to end.
+
+**Build deliberately.** The portfolio projects in the previous post — specifically the RAG system and the agent — directly prepare you for this interview. If you've built them properly, you have concrete examples to draw from in the technical deep dive.
+
+**Practice articulating.** Do 2–3 mock AI system design sessions, record yourself, and watch it back. The candidates who get offers are not smarter than the ones who don't — they've practiced explaining their thinking out loud. That skill is learnable.
+
+**One honest warning:** If you don't genuinely understand why a RAG system uses cosine similarity for retrieval, or why temperature greater than 1.0 makes model output more random, no amount of interview prep will cover those gaps. The preparation and the understanding are the same thing. There's no shortcut around actually building and understanding the systems.

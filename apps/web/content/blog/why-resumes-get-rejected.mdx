@@ -1,0 +1,53 @@
+---
+title: "Why Your Resume Gets Rejected Before a Human Reads It"
+description: "Around 75% of resumes never reach a hiring manager. The filter isn't subjective — it's automated, and it follows rules you can understand and optimize for."
+date: "2026-03-18"
+author: "Graduate.dev"
+tags: ["resume", "job-search", "career"]
+---
+
+You spent hours on your resume. You listed every relevant technology. You checked the formatting twice. Then you applied to 50 jobs and heard back from two.
+
+This is not about your qualifications. It's about a mechanical filter that most candidates don't know exists.
+
+## How the filter works
+
+Applicant Tracking Systems — ATS — are the software platforms that receive, parse, and rank resumes before any human sees them. Greenhouse, Lever, Workday, Taleo, iCIMS, and Ashby collectively handle the majority of hiring at technology companies. When you submit a resume through a company's career portal, it goes into one of these systems first.
+
+The system does two things: it parses your resume into structured fields (name, skills, job titles, companies, education), and it scores your resume against criteria the recruiter has configured. Resumes below the threshold simply don't appear in the recruiter's queue.
+
+Parsing is where many resumes die before they even get scored. ATS parsers are not reading your PDF the way a human does. They're extracting text using pattern matching. Multi-column layouts confuse parsers. Tables confuse parsers. Text inside graphics or headers and footers often gets ignored entirely. The parser may misread your job titles, scramble your dates, or lose entire sections.
+
+## The formatting rules that actually matter
+
+**Single-column layout.** Full stop. Multi-column resumes with a skills sidebar look polished to a human eye but are frequently parsed into garbled text by ATS. Content from both columns gets merged in reading order, producing nonsense.
+
+**Standard section headers.** "Work Experience," not "Where I've Worked." "Skills," not "Technical Proficiencies." ATS systems look for canonical section names. Clever alternatives frequently cause parsing failures.
+
+**PDF or docx.** Not Google Docs links. Not `.pages` files. PDF from a clean source like a professional resume builder, or `.docx`. The print-to-PDF output from Google Docs is usually fine; the export from Canva is often not, because it renders text as image elements.
+
+**Consistent date formats.** Month/Year or just Year, consistently. "May 2023 — Present" is safer than "5/23 — Present." Inconsistent formats trip up the parser's job duration calculations.
+
+**No headers or footers.** Your contact information goes in the body of the document, not in the header or footer sections. ATS parsers skip those areas.
+
+## Keyword matching — what it actually looks for
+
+Once parsed, your resume is scored for keyword relevance. The job description is the source of truth. The system compares words in your resume to words in the posting.
+
+This means you need to use the exact terminology from the job description, not synonyms. "Machine learning" and "ML" are not the same string. "Python" and "Python 3.x" may not match the same keyword. If the job posting says "LangChain" and your resume says "LangGraph," you may not match that keyword even if LangGraph is the more appropriate tool.
+
+The practical implication: tailor your resume for each job posting. This does not mean rewriting your resume for every application. It means keeping a master resume with all your experience and adjusting the skills section and job description bullets to mirror the language of each specific posting.
+
+## The three mistakes that eliminate strong candidates
+
+**Skills buried at the bottom.** If your skills are listed at the bottom of a two-page resume and the ATS threshold is set to show only the top 20% of applicants, you may score too low because your most relevant keywords appeared too far down. Put your skills section near the top.
+
+**Quantification without context.** "Improved system performance by 40%" scores well for keywords but doesn't tell a recruiter what system, what the baseline was, or why it mattered. "Reduced API response latency from 800ms to 480ms by introducing Redis caching for hot query paths" is both a stronger keyword match and a better signal to a human reader.
+
+**Listing every technology you've touched.** A resume that lists 35 skills looks unfocused. More importantly, if a recruiter is scanning your skills looking for "LangChain" and they have to read through three rows of technologies, they'll either miss it or discount it. Lead with what's most relevant for the role you're applying to.
+
+## What actually works
+
+Run your resume through a free ATS checker before applying to any role. Jobscan and Resume Worded both have free tiers. These tools parse your resume the way an ATS would and show you what information is being extracted correctly.
+
+For technical roles specifically: the resume is your first-round filter, not your differentiator. Your differentiator is your portfolio, your projects, your GitHub profile. Get past the filter with a clean, well-keyworded resume, and then your actual work does the talking.
